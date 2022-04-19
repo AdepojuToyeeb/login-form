@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const ControlledInputs = () => {
   const redirect = () => {
@@ -78,7 +79,7 @@ const ControlledInputs = () => {
           </div>
           <div className="form-control">
             <input
-              type="password"
+              type="Password"
               placeholder="password"
               id="password"
               name="password"
@@ -88,10 +89,17 @@ const ControlledInputs = () => {
             />
           </div>
 
-          <p>Forgot Password?</p>
-          <button type="submit" className="btn" onClick={handleSubmit}>
-            Login
-          </button>
+          <p>
+            No Account ?
+            <Link to={"/"}>
+              <span>Register</span>
+            </Link>
+          </p>
+          <div className="buttons">
+            <button type="submit" className="btn" onClick={handleSubmit}>
+              Login
+            </button>
+          </div>
         </form>
       </article>
     </>

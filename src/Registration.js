@@ -1,11 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-// JS
-// const input = document.getElementById('myText');
-// const inputValue = input.value
-// React
-// value, onChange
+
 
 const ControlledInputs = () => {
   const [person, setPerson] = useState({
@@ -88,7 +84,7 @@ const ControlledInputs = () => {
           </div>
           <div className="form-control">
             <input
-              type="password"
+              type="Password"
               placeholder="password"
               id="password"
               name="password"
@@ -119,16 +115,18 @@ const ControlledInputs = () => {
               required
             />
           </div>
-          <p>Forgot Password?</p>
+          
           <p>
-            No account?
-            <Link to={"./login"}>
+            Created Account ?
+            <Link to={"./login"}> 
               <span>Login</span>
             </Link>
           </p>
+          <div className = "buttons">
           <button type="submit" className="btn" onClick={handleSubmit}>
             Register
           </button>
+          </div>
         </form>
       </article>
     </>
