@@ -21,11 +21,6 @@ const ControlledInputs = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // if (person.firstName && person.password && person.email && person.phone) {
-      // const newPerson = { ...person, id: new Date().getTime().toString() };
-      // setPeople([...people, newPerson]);
-      // setPerson({ firstName: "", password: "", email: "" , phone: ""});
-    
       axios
         .post("https://ttmg-backend.herokuapp.com/api/auth/staffRegister", {
           email: person.email,
@@ -64,7 +59,6 @@ const ControlledInputs = () => {
         <form>
           {successStatus ? (
             <div className="success">
-              {/* {`${people.firstName} has been registered successfully`} */}
               {responseMessage}
             </div>
           ) : (

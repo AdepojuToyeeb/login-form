@@ -21,7 +21,6 @@ const ControlledInputs = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // if ( person.password && person.email ) {
 
     axios
       .post("http://ttmg-backend.herokuapp.com/api/auth/staffLogin", {
@@ -59,7 +58,6 @@ const ControlledInputs = () => {
         <form>
           {successStatus ? (
             <div className="success">
-              {/* {`${people.email} has logged in successfully`} */}
               {responseMessage}
             </div>
           ) : (
