@@ -61,7 +61,7 @@ const ControlledInputs = () => {
               {responseMessage}
             </div>
           ) : (
-            <></>
+          
           )}
 
           <div className="form-control">
